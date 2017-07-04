@@ -1,0 +1,26 @@
+<!-- 先静后动，先写内容再写样式 -->
+<view class="container" >
+  <image class="head-image" src="{{isPlayingMusic?posts_key.music.coverImg:posts_key.headImgSrc}}"></image>
+  <image catchtap="onMusicTap" class="audio" src="{{isPlayingMusic?'/images/music/music-stop.png':'/images/music/music-start.png'}}">
+  <!--三元判断，判断false和true切换路径-->
+  </image>
+  <view class="author-date">
+    <image class="avatar" src="{{posts_key.avatar}}"></image>
+    <text class="author">{{posts_key.author}}</text>
+    <text class="const-text">发表于</text>
+    <text class="date">{{posts_key.dateTime}}</text>
+  </view>
+  <text class="title">{{posts_key.title}}</text>
+  <view class="tool">
+    <view class="circle-img">
+      <image wx:if="{{collected}}" catchtap="onCollectTap" src="/images/icon/collection.png"></image>
+      <image wx:else catchtap="onCollectTap" src="/images/icon/collection-anti.png"></image>
+      <!--如果collected为true则显示，如果为假就不显示-->
+      <image class="share-img" catchtap="onShareTap"  src="/images/icon/share.png"></image>
+    </view>
+    <view class="zhixian"></view>
+  </view>
+  <text class="detail">{{posts_key.detail}}</text>
+</view>
+
+<!-- 内容区 -->

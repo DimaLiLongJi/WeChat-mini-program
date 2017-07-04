@@ -1,0 +1,10 @@
+<!-- 首页欢迎文件 -->
+<view class="container">
+  <image class="picture" src="/images/welcome.jpg"></image>
+  <view class="biankuang1">
+  <text class="ziti1">Hello,李龙吉先生</text>
+  </view>
+  <view class="biankuang2" catchtap="onTap">
+    <text class="ziti2">让世界更清真</text>
+  </view>
+</view>
